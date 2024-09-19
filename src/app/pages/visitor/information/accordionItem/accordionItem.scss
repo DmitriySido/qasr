@@ -1,0 +1,29 @@
+.accordion {
+  margin-bottom: 100px;
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+
+    .accordion-title {
+      padding: 40px 30px 40px 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all .2s ease-in-out;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+
+    .accordion-content {
+      padding: 10px;
+      background-color: #fafafa;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

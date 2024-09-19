@@ -1,0 +1,72 @@
+.calendar {
+  width: 100%;
+  margin: 0 auto 100px auto;
+
+  .calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+
+    .calendar-days{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .calendar-day {
+    text-align: center;
+    padding: 50px 0px;
+    border: 1px solid #ccc;
+
+    .calendar-day-number{
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .calendar-time{
+      text-align: center;
+    }
+  }
+
+  .calendar-day.calendar-weeak{
+    border: 1px solid transparent;
+    font-weight: 600;
+  }
+
+  .today {
+    background-color: #000080;
+    color: #fff;  
+  }
+
+  .past {
+    background-color: #cccccc;
+    color: #4a4a4a;
+  }
+
+  @media (max-width: 750px){
+
+    .calendar-day.calendar-weeak{
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .calendar-day{
+      padding: 20px 0px;
+    }
+  
+    .calendar-time{
+      font-size: 12px; 
+    }
+  }
+
+  @media (max-width: 630px){
+    .calendar-time{
+     font-size: 10px; 
+    }
+  }
+}

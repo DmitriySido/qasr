@@ -1,0 +1,133 @@
+.service-cards{
+  margin-bottom: 100px;
+
+  .service-card-links{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  
+    .service-card-link{
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #000080;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 25px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .service-card-link.active{
+      border-bottom: 2px solid #ab7f19;
+    }
+  }
+
+  .service-card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #ccc;
+
+    .service-card-foto{
+      width: 500px;
+      height: auto;
+    }
+
+    .service-cart-text{
+      padding: 40px;
+
+      .service-card-subject{
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .service-card-paragraph{
+        font-size: 14px;
+        color: #4a4a4a;
+        margin-bottom: 10px;
+        line-height: 140%;
+        width: 80%;
+      }
+
+      .service-card-read-more{
+        font-size: 14px;
+        font-weight: 600;
+        color: #000080;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (max-width: 1000px){
+      .service-card-foto{
+        width: 370px;
+        height: auto;
+      }
+
+      .service-cart-text{
+        padding: 30px;
+
+        .service-card-paragraph{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 678px){
+    margin-bottom: 20px;
+    .service-card-links{
+
+      .service-card-link{
+        font-size: 14px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+  
+      .service-card-link.active{
+        border-bottom: 1px solid #ab7f19;
+      }
+    }
+
+    .service-card{
+      display: block;
+
+      .service-card-foto{
+        width: 100%;
+        height: auto;
+      }
+  
+      .service-cart-text{
+        padding: 25px;
+  
+        .service-card-paragraph{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 470px){
+
+    .service-card-links{
+      display: block;
+
+      .service-card-link{
+        font-size: 18px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        opacity: 0.7;
+      }
+  
+      .service-card-link.active{
+        border-bottom: 1px solid #ab7f19;
+        opacity: 1;
+      }
+    }
+  }
+}

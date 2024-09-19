@@ -1,0 +1,146 @@
+.zones-welcome-wrapper{
+  width: 100vw;
+  height: auto;
+  background: #fae9d5;
+  margin-bottom: 70px;
+
+  .zones-welcome-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .zones-titlte{
+      font-size: 52px;
+      color: #a07712;
+    }
+
+    .zones-main-foto{
+      width: auto;
+      height: 250px;
+    }
+
+    @media (max-width: 840px){
+      .zones-titlte{
+        font-size: 32px;
+      }
+
+      .zones-main-foto{
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .zones-titlte{
+        font-size: 28px;
+      }
+
+      .zones-main-foto{
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .zones-welcome-wrapper{
+    padding: 80px 0px;
+
+    .zones-welcome-inner{
+
+      .zones-titlte{
+        font-size: 38px;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 140%;
+      }
+    
+      .zones-main-foto{
+        display: none;
+      } 
+    }
+  }
+}
+
+.discover{
+  margin-bottom: 100px;
+
+  .discover-paragraph{
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto 100px auto;
+    line-height: 140%;
+
+    @media (max-width: 500px){
+      margin: 0 auto 70px auto;
+    }
+  }
+
+  .discover-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .discover-item{
+      width: 32%;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #a07712;
+
+      @media (max-width: 666px){
+        width: 48%;
+      }
+
+      @media (max-width: 470px){
+        width: 100%;
+      }
+
+      .discover-item-foto{
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .discover-item-title{
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .discover-item-subtitle{
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 140%;
+      }
+
+      .link-wrapper{
+        .discover-item-link{
+          color: #000080;
+          font-weight: 600;
+  
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+  
+        .arrow {
+          display: inline-block;
+          width: 8px; 
+          height: 8px;
+          border-bottom: 2px solid #000080;
+          border-left: 2px solid #000080;
+          transform: rotate(225deg);
+          margin-top: -10px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    @media (max-width: 470px){
+      .discover-item{
+        margin-bottom: 10px;
+      }
+      .discover-item:not(:last-child){
+        margin-bottom: 70;
+      }
+    }
+  }
+}

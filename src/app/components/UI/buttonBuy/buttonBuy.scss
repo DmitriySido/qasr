@@ -1,0 +1,32 @@
+.buy-ticket-button{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000080;
+  padding: 15px 30px;
+  border: 1px solid #000080;
+  text-transform: uppercase;
+  transition: all .1s ease-in-out;
+
+  &:hover{
+    background-color: #ab7f19;
+    color: #fff;
+    border-color: #ab7f19;
+  }
+}
+
+.watan-button{
+  border-color: #fff;
+  color: #fff;
+}
+
+@media (max-width: 560px){
+  .buy-ticket-button{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px){
+  .buy-ticket-button{
+    padding: 12px 25px;
+  }
+}

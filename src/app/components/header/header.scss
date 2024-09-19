@@ -1,0 +1,347 @@
+.header{
+  position: relative;
+  box-shadow: 0 5px 8px #00000042;
+  z-index: 1;
+
+  .burger-button{
+    display: none;
+  }
+
+  .close-burger-menu{
+    display: none;
+  }
+
+  .header-inner{
+    background: #fff;
+    color: #4a4a4a;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .buy-ticket-button-phone{
+      display: none;
+    }
+
+    .header-content-top{
+      display: flex;
+      align-items: center;
+  
+      .opening-hours{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 30px;
+        
+        .clock-icon{
+          margin-right: 20px;
+        }
+
+        .tooltip-subtitle{
+          padding: 15px 10px 10px 10px;
+          color: #4a4a4a;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+  
+        .opening-hours-text{
+          color: #000;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .opening-hours-link{
+          font-size: 18px;
+          display: block;
+          text-align: center;
+          padding: 10px 20px;
+          background: #000080;
+          color: #fff;
+          transition: all .2s ease-in-out;
+
+          &:hover{
+            background: #0000804b;
+            color: #000080;
+          }
+        }
+  
+        .arrow {
+          display: inline-block;
+          width: 10px; /* Ширина стрелки */
+          height: 10px; /* Высота стрелки */
+          border-bottom: 3px solid #000080; /* Нижняя часть стрелки */
+          border-left: 3px solid #000080; /* Левая часть стрелки */
+          transform: rotate(-45deg); /* Поворот для создания стрелки */
+          margin-top: -6px;
+          margin-left: 100px;
+        }
+      }
+
+    }
+  
+    .header-content-bottom {
+      float: right;
+    }
+  }
+
+  @media (max-width: 1370px) {
+    .header-inner{
+      padding: 20px 10px 0px 10px;
+    }
+  
+    .header-content-bottom .navigation-container:last-child .tooltip{
+      left: -20px;
+    }
+  }
+
+  @media (max-width: 730px){  
+    .header-inner{
+
+      .buy-ticket-button-phone{
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        padding: 15px 30px;
+        border: 1px solid #000080;
+        background: #000080;
+        text-transform: uppercase;
+        display: block;
+      }
+
+      .logo-icon{
+        margin-right: -105px;
+      }
+    }
+
+    .burger-button{
+      display: block;
+      background: transparent;
+      width: 30px;
+      height: 40px;
+
+      position: relative;
+
+      span{
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #4a4a4a;
+        top: 19px;
+        left: 0px;
+      }
+
+      &::before{
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #4a4a4a;
+        top: 10px;
+        left: 0px;
+      }
+
+      &::after{
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #4a4a4a;
+        bottom: 10px;
+        left: 0px;
+      }
+    }
+
+    .close-burger-menu{
+      position: relative;
+      background: transparent;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 35px;
+      display: block;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 15px;
+        background: #4a4a4a;
+        width: 30px;
+        height: 1px;
+        transform: rotate(45deg);
+      }
+
+      
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 15px;
+        background: #4a4a4a;
+        width: 30px;
+        height: 1px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .header-content.active{
+      transform: translateX(0px);
+      opacity: 1;
+      transition: all .7s ease-in-out;
+    }
+
+    .header-content{
+      transform: translateX(-100vw);
+      opacity: 0;
+      transition: all .7s ease-in-out;
+      position: absolute;
+      background: #fff;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      padding: 35px 20px 20px 20px;
+      box-shadow: 0 0 10px #0000004d;
+
+      .header-content-top{
+        display: block;
+
+        .opening-hours{
+          position: relative;
+          right: 0px;
+          width: 100%;
+          margin-bottom: 30px;
+          margin-left: 0px;
+
+          .arrow{
+            position: absolute;
+            right: 0px;
+          }
+        }
+
+        .buy-ticket-button{
+          display: none;
+        }
+      }
+
+      .header-content-bottom{
+        display: block;
+        float: left;
+
+        .navigation-container{
+          width: 100%;
+
+          .text{
+            font-size: 16px;
+          }
+
+          .tooltip{
+            left: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 440px){
+    .header-inner{
+      .logo-icon{
+        width: 80px;
+        height: 80px;
+      }
+  
+      .buy-ticket-button-phone{
+        font-size: 12px;
+        padding: 15px 20px;
+      }
+
+      .header-content-bottom .navigation-container:not(:last-child) {
+        margin: 20px 0px 20px 20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.navigation-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0px 20px 20px;
+
+  &:not(:last-child){
+    margin: 20px 20px 20px 20px;
+  }
+  
+  .arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #000080;
+    border-left: 2px solid #000080;
+    transform: rotate(-45deg) translateY(-5px);
+    margin-left: 20px;
+  }
+
+  .text {
+    color: #000080;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    color: #000080;
+    
+    border-radius: 4px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .navigation-link {
+      font-size: 14px;
+      color: #000080;
+      display: flex;
+      border-bottom: 1px solid #ab7f1931;
+      padding: 10px;
+      margin-bottom: 0px;
+
+      &:hover{
+        background: #ab7f1931;
+      }
+    }
+  }
+  
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    transform: translateX(-50%);
+  }
+}
+
+.navigation-container:hover .tooltip {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 5px);
+}

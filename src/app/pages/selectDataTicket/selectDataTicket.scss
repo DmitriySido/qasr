@@ -1,0 +1,187 @@
+.container{
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .heading{
+    text-align: center;
+    margin: 30px 0px;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  .select-count-wrapper{
+    margin-bottom: 50px;
+  }
+
+  .more-ticket{
+
+    .more-ticket-subtitle{
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .counter-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      
+      .counter-button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #000080;
+        border: 1px solid #000080;
+        background: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        
+        &:hover {
+          background: #ab7f19;
+          color: #fff;
+          border: 1px solid #ab7f19;
+        }
+      
+        &:active {
+          background: #ab7f19;
+          color: #fff;
+          border: 1px solid#ab7f19;
+        }
+      }
+      
+      .counter-display {
+        font-size: 24px;
+        font-weight: 700;
+        width: 50px;
+        text-align: center;
+        color: #414141;
+      }
+    }
+  }
+
+  .total-panel{
+    display: flex;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0px;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+
+    .total-text{
+      font-size: 18px;
+    }
+
+    .buy-ticket-button{
+      font-size: 14px;
+      font-weight: 500;
+      color: #000080;
+      background: transparent;
+      padding: 15px 30px;
+      border: 1px solid #000080;
+      text-transform: uppercase;
+      transition: all .1s ease-in-out;
+    
+      &:hover{
+        background-color: #ab7f19;
+        color: #fff;
+        border-color: #ab7f19;
+      }
+
+      &:disabled{
+        background: #ccc;
+        border-color: #ccc;
+        color: #414141;
+        cursor: default;
+      }
+    }
+    
+    @media (max-width: 560px){
+      .buy-ticket-button{
+        font-size: 12px;
+      }
+    }
+    
+    @media (max-width: 375px){
+      .buy-ticket-button{
+        padding: 12px 25px;
+      }
+    }
+  }
+
+  .react-datepicker{
+    width: 100%;
+    border-radius: 0px;
+    border-color: #ccc;
+    margin-bottom: 30px;
+
+    .react-datepicker__month-container{
+      width: 100%;
+    }
+
+    .react-datepicker__week{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .react-datepicker__current-month{
+      height: 50px;
+    }
+
+    .react-datepicker__header{
+      background-color: #fef7ee;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .react-datepicker__day-names{
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+    }
+
+    .react-datepicker__navigation--next {
+      right: 23px;
+      top: 23px;
+    }
+
+    .react-datepicker__day-name{
+      width: 100%;
+    }
+
+    .react-datepicker__day{
+      width: 100%;
+      height: 80px;
+      padding: 27px 0px;
+
+      @media (max-width: 560px){
+        height: 50px;
+
+        padding: 12px 0px;
+      }
+    }
+
+    .react-datepicker__day--selected{
+      background: #000080;
+      color: #fff;
+    }
+
+    .react-datepicker__day--keyboard-selected{
+      color: #fff;
+    }
+
+    .react-datepicker__current-month{
+      font-style: 18px;
+      font-weight: 700;
+      color: #414141;
+    }
+  }
+}

@@ -1,95 +1,57 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Share from "./components/mainPage/share/Share";
+import Slider from "./components/mainPage/slider/Slider";
+import Watan from "./components/mainPage/watan/Watan";
+
+import Foto1 from '../../public/images/scroll-foto-1.jpg';
+import Foto2 from '../../public/images/scroll-foto-2.jpg';
+import Foto3 from '../../public/images/scroll-foto-3.jpg';
+import Foto4 from '../../public/images/scroll-foto-4.jpg';
 
 export default function Home() {
+
+  const InsideQasrSlideList = [{
+    slideImage: Foto1,
+    imageWidth: 400,
+    imageheight: 280,
+    slideTite: 'Qasr Al Watan Library',
+    slideSubtitle: 'Explore centuries of human knowledge in a vast collection of books focusing on the culture, development and achievements of the United Arab Emirates.',
+    linkPaht: '/pages/selectDataTicket'
+  },
+  {
+    slideImage: Foto2,
+    imageWidth: 400,
+    imageheight: 280,
+    slideTite: 'Palace in Motion (Light Show)',
+    slideSubtitle: 'Join us as we light up the night with a spectacular light and sound show. A story told in three acts about the past, present, and the future vision of the nation.',
+    linkPaht: '/pages/selectDataTicket'
+  },
+  {
+    slideImage: Foto3,
+    imageWidth: 400,
+    imageheight: 280,
+    slideTite: 'Dining',
+    slideSubtitle: 'Enjoy a selection of culinary choices ranging from high-end dining to light snacks.',
+    linkPaht: ''
+  },
+  {
+    slideImage: Foto4,
+    imageWidth: 400,
+    imageheight: 280,
+    slideTite: 'Shopping',
+    slideSubtitle: 'Complete your experience with a host of exclusive, high-quality mementos from the Palace.',
+    linkPaht: ''
+  }]
+
+  const SliderTitle = {
+    sliderSubject: 'Inside Qasr Al Watan',
+    sliderSubtitle: ''
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main>
+      <Watan />
+      <Share />
+      <Slider identifier='HomePage' sliderList={InsideQasrSlideList} sliderTitle={SliderTitle}/>
     </main>
   );
 }

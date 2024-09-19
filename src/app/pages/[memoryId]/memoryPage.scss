@@ -1,0 +1,143 @@
+.memory{
+  margin-bottom: 80px;
+
+  .memory-wrapper{
+    background: #fbe9d5;
+  
+    .memory-inner{
+      width: 100%;
+      max-width: 1300px;
+      padding: 0px 20px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+  
+      .memory-title{
+        color: #ab7f19;
+        font-size: 48px;
+        width: 35%;
+        line-height: 140%;
+      }
+
+      .memory-foto-adaptive{
+        display: none;
+      }
+  
+      .memory-foto{
+        width: 900px;
+        height: auto;
+      }
+    }
+  }
+
+  .memory-paragraph{
+    text-align: center;
+    font-size: 14px;
+    color: #414141;
+    line-height: 140%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  @media (max-width: 1000px){
+    .memory-wrapper{
+    
+      .memory-inner{
+        margin-bottom: 80px;
+    
+        .memory-title{
+          font-size: 36px;
+          width: 60%;
+        }
+    
+        .memory-foto{
+          width: 600px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 806px){
+    .memory-wrapper{
+      margin-bottom: 100px;
+      .memory-inner{
+        margin-bottom: 80px;
+    
+        .memory-title{
+          font-size: 36px;
+          width: 60%;
+        }
+    
+        .memory-foto{
+          width: 400px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 806px){
+    .memory-wrapper{
+      margin-bottom: 80px;
+
+      .memory-inner{
+        margin-bottom: 80px;
+        display: block;
+        padding: 0px;
+    
+        .memory-title{
+          font-size: 42px;
+          width: 100%;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto 40px auto;
+          padding-top: 30px;
+        }
+        
+        .memory-foto-adaptive{
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .memory-foto{
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 530px){
+    .memory-wrapper{
+      margin-bottom: 70px;
+
+      .memory-inner{
+        margin-bottom: 70px;
+    
+        .memory-title{
+          font-size: 38px;
+          width: 80%;
+        }
+        
+        .memory-foto-adaptive{
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .memory-foto{
+          display: none;
+        }
+      }
+    }
+
+    .memory-paragraph{
+      font-size: 16px;
+    }
+  }
+}

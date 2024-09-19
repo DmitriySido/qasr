@@ -1,0 +1,97 @@
+.tickets{
+  
+  .tickets-wrapper{
+    background: #fae9d5;
+    margin-bottom: 100px;
+
+    .tickets-inner{
+
+      width: 100%;
+      max-width: 1300px;
+      padding: 0px 20px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .tickets-title{
+        font-size: 42px;
+        color: #a07712;
+        line-height: 140%;
+      }
+
+      .tickets-foto{
+        width: 700px;
+        height: auto;
+      }
+
+      .tickets-foto-adaptive{
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 945px){
+    
+  .tickets-wrapper{
+    .tickets-inner{
+
+      .tickets-title{
+        font-size: 38px;
+      }
+
+      .tickets-foto{
+        width: 500px;
+      }
+    }
+  }
+  }
+
+  @media (max-width: 780px){
+    
+  .tickets-wrapper{
+
+    .tickets-inner{
+      display: block;
+      padding: 0px;
+
+      .tickets-title{
+        font-size: 42px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0px auto 40px auto;
+        padding-top: 40px;
+      }
+
+      .tickets-foto{
+        display: none;
+      }
+
+      .tickets-foto-adaptive{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  }
+
+  @media (max-width: 510px){
+    
+  .tickets-wrapper{
+
+    .tickets-inner{
+
+      .tickets-title{
+        font-size: 32px;
+        width: 90%;
+        margin: 0px auto 40px auto;
+        padding-top: 40px;
+      }
+    }
+  }
+  }
+}
